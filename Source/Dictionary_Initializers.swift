@@ -12,7 +12,7 @@ public extension Dictionary {
     
     init(pairs: [(Key, Value)]) {
         self = [Key: Value]()
-        pairs.forEach { (k, v) -> () in
+        for (_, (k, v)) in pairs.enumerated() {
             self[k] = v
         }
     }
